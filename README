@@ -1,1 +1,30 @@
 This is the PHPCS sniff for the Zend Framework 2 coding standard.
+
+It is currently not complete yet, as a few sniffs are still missing.
+
+DONE:
+
+- Check for proper function call argument style
+- Check for function braces being on a line by themself
+- Check for invalid usage for short open tags
+- Check for valid indentation
+- Check for character limit (80 soft, 120 hard)
+- Check for valid unix line-endings
+- Check for valid variable names
+- Check for invalid usage of closing PHP tag
+- Check for invalid usage of perl-style hash comments
+
+TODO:
+
+- Check for proper abstract class naming
+- Check for valid interface naming
+- Check for valid class/method naming
+- Check for valid constant naming
+- Check for proper user of string literals
+- Check for proper array styles
+- Check for proper class/method documentation blocks
+- Check for invalid use of 'var' keyword
+- Check for proper argument style in method declarations
+- Check for proper if statement usage
+- Check for proper switch usage
+

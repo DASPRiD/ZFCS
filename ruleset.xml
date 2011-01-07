@@ -2,12 +2,20 @@
 <ruleset name="ZFCS">
     <description>Zend Framework coding standard.</description>
 
+    <!-- Function call arguments must be separated by ', ' -->
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing"/>
+
+    <!-- Function braces must be on a line by themself -->
     <rule ref="Generic.Functions.OpeningFunctionBraceBsdAllman"/>
+
+    <!-- Disallow short open tags -->
     <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+
+    <!-- Disallow tabs for indent, force 4 spaces -->
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
     <rule ref="Generic.WhiteSpace.ScopeIndentSniff"/>
 
+    <!-- Soft limit is 80 characters, hard limit is 120 -->
     <rule ref="Generic.Files.LineLength">
         <properties>
             <property name="lineLimit" value="80"/>
@@ -15,6 +23,7 @@
         </properties>
     </rule>
 
+    <!-- Only allow Unix-style line-endings -->
     <rule ref="Generic.Files.LineEndings">
         <properties>
             <property name="eolChar" value="\n"/>
