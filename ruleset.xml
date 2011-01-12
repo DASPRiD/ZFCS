@@ -13,7 +13,11 @@
 
     <!-- Disallow tabs for indent, force 4 spaces -->
     <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
-    <rule ref="Generic.WhiteSpace.ScopeIndentSniff"/>
+    <rule ref="Generic.WhiteSpace.ScopeIndentSniff">
+        <properties>
+            <property name="exact" value="true"/>
+        </properties>
+    </rule>
 
     <!-- Soft limit is 80 characters, hard limit is 120 -->
     <rule ref="Generic.Files.LineLength">
