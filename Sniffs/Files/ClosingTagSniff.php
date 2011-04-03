@@ -16,7 +16,6 @@
  * @package    ZFCS_Sniffs
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id$
  */
 
 /**
@@ -30,7 +29,7 @@
 class ZFCS_Sniffs_Files_ClosingTagSniff implements PHP_CodeSniffer_Sniff
 {
     /**
-     * register(): defined by PHP_CodeSniffer_Sniff interface
+     * register(): defined by PHP_CodeSniffer_Sniff interface.
      *
      * @see    PHP_CodeSniffer_Sniff::register()
      * @return array
@@ -41,7 +40,7 @@ class ZFCS_Sniffs_Files_ClosingTagSniff implements PHP_CodeSniffer_Sniff
     }
 
     /**
-     * process(): defined by PHP_CodeSniffer_Sniff interface
+     * process(): defined by PHP_CodeSniffer_Sniff interface.
      *
      * @see    PHP_CodeSniffer_Sniff::process()
      * @return void

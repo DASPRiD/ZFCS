@@ -16,13 +16,12 @@
  * @package    ZFCS_Sniffs
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id$
  */
 
 /**
  * This sniff checks for propper variable naming.
  *
- * All variables should be camel-cased and *should* not contain numbers.
+ * All variables must be camel-cased and *should* not contain numbers.
  *
  * @category   ZFCS
  * @package    ZFCS_Sniffs
@@ -43,7 +42,7 @@ class ZFCS_Sniffs_NamingConventions_ValidVariableNameSniff
     );
 
     /**
-     * processVariable(): defined by PHP_CodeSniffer_Standards_AbstractVariableSniff class
+     * processVariable(): defined by PHP_CodeSniffer_Standards_AbstractVariableSniff class.
      *
      * @see    PHP_CodeSniffer_Sniff::processVariable()
      * @param  PHP_CodeSniffer_File $phpcsFile
@@ -109,7 +108,7 @@ class ZFCS_Sniffs_NamingConventions_ValidVariableNameSniff
     }
 
     /**
-     * processMemberVar(): defined by PHP_CodeSniffer_Standards_AbstractVariableSniff class
+     * processMemberVar(): defined by PHP_CodeSniffer_Standards_AbstractVariableSniff class.
      *
      * @see    PHP_CodeSniffer_Sniff::processMemberVar()
      * @param  PHP_CodeSniffer_File $phpcsFile 
@@ -133,7 +132,7 @@ class ZFCS_Sniffs_NamingConventions_ValidVariableNameSniff
     }
 
     /**
-     * processVariableInString(): defined by PHP_CodeSniffer_Standards_AbstractVariableSniff class
+     * processVariableInString(): defined by PHP_CodeSniffer_Standards_AbstractVariableSniff class.
      *
      * @see    PHP_CodeSniffer_Sniff::processVariableInString()
      * @param  PHP_CodeSniffer_File $phpcsFile 

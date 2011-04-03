@@ -16,11 +16,10 @@
  * @package    ZFCS_Sniffs
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id$
  */
 
 /**
- * This sniff prohibits the use of Perl style hash comments
+ * This sniff prohibits the use of Perl style hash comments.
  *
  * @category   ZFCS
  * @package    ZFCS_Sniffs
@@ -30,7 +29,7 @@
 class ZFCS_Sniffs_Commenting_DisallowHashCommentsSniff implements PHP_CodeSniffer_Sniff
 {
     /**
-     * register(): defined by PHP_CodeSniffer_Sniff interface
+     * register(): defined by PHP_CodeSniffer_Sniff interface.
      *
      * @see    PHP_CodeSniffer_Sniff::register()
      * @return array
@@ -41,7 +40,7 @@ class ZFCS_Sniffs_Commenting_DisallowHashCommentsSniff implements PHP_CodeSniffe
     }
 
     /**
-     * process(): defined by PHP_CodeSniffer_Sniff interface
+     * process(): defined by PHP_CodeSniffer_Sniff interface.
      *
      * @see    PHP_CodeSniffer_Sniff::process()
      * @return void
@@ -50,7 +49,7 @@ class ZFCS_Sniffs_Commenting_DisallowHashCommentsSniff implements PHP_CodeSniffe
     {
         $tokens = $phpcsFile->getTokens();
 
-        if ($tokens[$stackPtr]['content']{0} === '#') {
+        if ($tokens[$stackPtr]['content'][0] === '#') {
             $error = 'Hash comments are prohibited; found %s';
             $data  = array(trim($tokens[$stackPtr]['content']));
 

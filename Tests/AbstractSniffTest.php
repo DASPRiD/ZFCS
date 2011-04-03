@@ -16,7 +16,6 @@
  * @package    ZFCS_Tests
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id$
  */
 
 /**
@@ -70,6 +69,8 @@ abstract class ZFCS_Tests_AbstractSniffTest extends PHPUnit_Framework_TestCase
     protected function assertSniffError($sniffClass, $file, $expectedLine, $expectedMessage)
     {
         $errors = $this->runSniff($sniffClass, $file)->getErrors();
+
+        $this->assertSniffMessage($errors, $expectedLine, $expectedMessage);
     }
 
     /**
@@ -84,6 +85,8 @@ abstract class ZFCS_Tests_AbstractSniffTest extends PHPUnit_Framework_TestCase
     protected function assertSniffWarning($sniffClass, $file, $expectedLine, $expectedMessage)
     {
         $warnings = $this->runSniff($sniffClass, $file)->getWarnings();
+
+        $this->assertSniffMessage($warnings, $expectedLine, $expectedMessage);
     }
 
     /**
@@ -127,13 +130,13 @@ abstract class ZFCS_Tests_AbstractSniffTest extends PHPUnit_Framework_TestCase
     protected function runSniff($sniffClass, $file)
     {
         try {
-            self::$phpcs->process($file, 'ZFCS', array($sniffClass));
+            self::$phpcs->process($file, dirname(__DIR__), array($sniffClass));
         } catch (Exception $e) {
             $this->fail('An unexpected exception has been caught: ' . $e->getMessage());
         }
 
-        $sniffs   = self::$phpcs->getTokenSniffs();
-        $files    = self::$phpcs->getFiles();
+        $sniffs = self::$phpcs->getTokenSniffs();
+        $files  = self::$phpcs->getFiles();
 
         return array_pop($files);
     }

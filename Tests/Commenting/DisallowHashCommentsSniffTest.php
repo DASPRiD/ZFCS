@@ -16,7 +16,6 @@
  * @package    ZFCS_Tests
  * @copyright  Copyright (c) 2005-2011 Zend Technologies USA Inc. (http://www.zend.com)
  * @license    http://framework.zend.com/license/new-bsd     New BSD License
- * @version    $Id$
  */
 
 /**
@@ -33,5 +32,13 @@ require_once __DIR__ . '/../AbstractSniffTest.php';
 class ZFCS_Tests_Commenting_DisallowHashCommentsSniff
     extends ZFCS_Tests_AbstractSniffTest
 {
-    
+    public function testErrorWithHashComment()
+    {
+        $this->assertSniffError(
+            'ZFCS_Sniffs_Commenting_DisallowHashCommentsSniff',
+            __DIR__ . '/assets/InvalidUseOfHashComments.php',
+            2,
+            'Hash comments are prohibited; found #This is a hash comment'
+        );
+    }
 }
